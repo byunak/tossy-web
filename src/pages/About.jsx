@@ -1,20 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Vector3 from "../images/Vector3.svg";
+import Vector4 from "../images/Vector4.svg";
 
 const About = () => {
   return (
     <>
-      <div className="bg-main flex justify-center h-96 sm:h-[490px]">
-        <img src={Vector3} alt="$$$$$" className="w-11/12 px-2" />
+      {/* Img */}
+      <div className="bg-main flex justify-center h-96 sm:h-[490px] lg:relative">
+        <img
+          src={Vector3}
+          alt="$$$$$"
+          className="w-11/12 px-2 lg:w-[680px] lg:absolute"
+        />
       </div>
 
-      <div className="flex flex-col text-center items-center w-10/12 mx-auto mt-14">
+      {/* Merhaba */}
+      <div className="flex flex-col text-center items-center w-10/12 mx-auto mt-14 lg:mt-48">
         <h1 className="font-crimson font-bold text-4xl sm:text-5xl lg:text-4xl text-main">
           Hakkımızda
         </h1>
-        <h2 className="font-worksans font-bold text-base sm:text-xl lg:text-base text-secondary tracking-[5px] mt-4">
-          MERHABA
+        <h2 className="font-worksans font-bold text-base sm:text-xl lg:text-base text-alternative tracking-[5px] mt-4">
+          MERHABA!
         </h2>
         <div className="font-worksans font-normal text-xl sm:text-2xl lg:text-xl text-main mt-4">
           <p className="mt-10">
@@ -58,6 +65,89 @@ const About = () => {
           >
             Başvur
           </Link>
+        </div>
+      </div>
+
+      {/* */}
+      <div className="w-11/12 lg:w-9/12 flex flex-col lg:flex-row lg:justify-between mx-auto mt-9 sm:mt-24 lg:mt-9">
+        <div className="sm:self-center lg:self-auto lg:order-1 lg:w-5/12">
+          <img src={Vector4} alt="$$$$$" />
+        </div>
+
+        <div className="mt-7 lg:mt-44 lg:w-6/12 lg:px-0 xl:px-16">
+          <h1 className="block lg:hidden font-crimson font-bold text-main text-4xl sm:text-6xl">
+            Misyonumuz
+          </h1>
+          <h1 className="hidden lg:block font-crimson font-bold text-main text-4xl">
+            Misyonumuza Kulak Verin
+          </h1>
+
+          <div className="font-worksans font-normal text-base sm:text-2xl lg:text-base mt-5">
+            <p>
+              Bizim misyonumuz, yiyeceklerin israfını azaltarak çevre için
+              olumlu bir etki yaratmak ve aynı zamanda kullanıcılarımıza uygun
+              fiyatlı, lezzetli yiyecek seçenekleri sunmaktır. Bu amaçla,
+              restoranlar, pazarlar, kafeler ve bufetler gibi işyerleriyle
+              işbirliği yaparak, tüketilemeyen yiyecekleri kullanıcılarımızla
+              paylaşıyoruz.
+            </p>
+            <br></br>
+            <br></br>
+
+            <p>
+              Bizimle birlikte çalışan partnerlerimiz de, yiyeceklerinin
+              atılmaması için ellerinden geleni yapıyor ve bu sayede hem
+              yiyeceklerin israfını azaltıyoruz hem de kullanıcılarımıza düşük
+              fiyatlarla yüksek kaliteli yiyecekler sunuyoruz.
+            </p>
+            <br></br>
+            <br></br>
+
+            <p>
+              Misyonumuz, yiyeceklerin israfını azaltarak dünyayı gelecek
+              nesiller için daha daha yaşanabilir bir yer haline getirmek ve
+              aynı zamanda herkesin uygun fiyatlı, lezzetli yiyeceklere erişim
+              hakkına sahip olmasını sağlamaktır.
+            </p>
+          </div>
+
+          <Link
+            to="kesfet"
+            className="block lg:hidden bg-main rounded-md font-worksans font-normal text-white text-xl text-center mx-auto w-5/12 py-2 sm:text-3xl sm:py-4 sm:mt-10 mt-5"
+          >
+            Keşfet
+          </Link>
+        </div>
+      </div>
+
+      {/* */}
+      <div className="flex flex-col w-full mt-14 mb-14">
+        <h1 className="font-crimson font-bold text-4xl sm:text-6xl lg:text-4xl text-main flex flex-col lg:flex-row lg:justify-center text-center">
+          <span>Sözleşme&nbsp;</span>
+          <span>ve&nbsp;</span>
+          <span>Dökümanlar</span>
+        </h1>
+
+        <div className="font-worksans font-bold text-sm sm:text-lg lg:text-sm text-alternative tracking-[5px] !leading-loose flex flex-col lg:tracking-widest lg:flex-row lg:justify-center text-center mt-4 sm:mt-8 lg:mt-4">
+          <span>AYDINLATMA METNİ,&nbsp;</span>
+          <span>AÇIK RIZA BEYANI,&nbsp;</span>
+          <span>GİZLİLİK SÖZLEŞMESİ,&nbsp;</span>
+          <span>KULLANIM KOŞULLARI,&nbsp;</span>
+          <span>PARTNERLİK SÖZLEŞMESİ</span>
+        </div>
+
+        <div className="font-worksans font-normal text-base sm:text-xl lg:text-base text-main text-center w-11/12 mx-auto mt-4 sm:mt-8 lg:mt-4">
+          <p className="block lg:hidden">
+            Dünyayı ve cüzdanınızı korurken, sizi memnun tutmak bizim Yukarıda
+            bulunan dokümanlar firmamızın farklı süreçlerinde farklı ihtiyaçlar
+            ve yasal yükümlülükler gereğince aktif olarak kullanılmaktadır. çok
+            önemli. Gelin tanışalım!
+          </p>
+          <p className="hidden lg:block">
+            Yukarıda bulunan dokümanlar firmamızın farklı süreçlerinde farklı
+            ihtiyaçlar ve yasal yükümlülükler gereğince aktif olarak
+            kullanılmaktadır.
+          </p>
         </div>
       </div>
     </>

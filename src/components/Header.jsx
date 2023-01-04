@@ -10,11 +10,8 @@ const Header = () => {
   // Pull links from LinkData.jsx
   const ListLinks = LinkData.map((link) => {
     return (
-      <Link to={`${link.href}`}>
-        <li
-          key={link.text}
-          className="lg:mr-8 lg:p-0 pr-4 py-2 sm:py-4 text-end font-['Work Sans'] font-medium text-xl sm:text-2xl lg:text-xl tracking-wider"
-        >
+      <Link to={`${link.href}`} key={link.text}>
+        <li className="lg:mr-8 lg:p-0 pr-4 py-2 sm:py-4 text-end font-['Work Sans'] font-medium text-xl sm:text-2xl lg:text-xl tracking-wider">
           {link.text}
         </li>
       </Link>

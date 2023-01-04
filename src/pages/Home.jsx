@@ -1,62 +1,10 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import TossyImage from "../images/TossyImage.svg";
 import Vector1 from "../images/Vector1.svg";
 import Vector2 from "../images/Vector2.svg";
 
 const Home = () => {
-  const [content1, setContent1] = useState("");
-
-  useEffect(() => {
-    //Text changer
-    function updateContent() {
-      if (window.innerWidth < 768) {
-        setContent1(
-          "Anlaşmalı lokasyonlarımızın arasına katılarak; tüketilemeyen yemeklerinizden kâr edin ve avantajlarımızdan faydalanın."
-        );
-      } else {
-        setContent1(
-          "Anlaşmalı lokasyonlarımız arasına katılmak, Tossy partnelerine özel hizmetlerimizden faydalanmak ve tüketilemeyen yemeklerinizden kâr edebilmek için aramıza katılın."
-        );
-      }
-    }
-
-    updateContent();
-    window.addEventListener("resize", updateContent);
-
-    return () => {
-      window.removeEventListener("resize", updateContent);
-    };
-  });
-
-  const [content2, setContent2] = useState("");
-
-  useEffect(() => {
-    //Text changer
-    function updateContent() {
-      if (window.innerWidth < 768) {
-        setContent2(
-          "Dünyayı ve cüzdanınızı korurken, sizi memnun tutmak bizim için çok önemli. Gelin tanışalım!"
-        );
-      } else {
-        setContent2(
-          `Partnerlik, yatırım, kariyer, fuar ve benzeri konular için sorularınız; partnerlerimiz, kullanıcılarımız,
-          personellerimiz, uygulamamız ile alakalı şikayetleriniz ve/veya önerileriniz var ise lütfen bize ulaşın. 
-          Dünyayı ve cüzdanınızı korurken, sizi memnun tutmak bizim için çok önemli.
-          `
-        );
-      }
-    }
-
-    updateContent();
-    window.addEventListener("resize", updateContent);
-
-    return () => {
-      window.removeEventListener("resize", updateContent);
-    };
-  });
-
   return (
     <>
       {/* IMAGE */}
@@ -100,9 +48,17 @@ const Home = () => {
         <h2 className="font-crimson text-2xl sm:text-4xl lg:text-2xl text-main mt-4">
           Partnerlerimiz arasına katılın
         </h2>
-        <p className="font-worksans font-normal text-xl sm:text-3xl lg:text-xl sm:text-center text-main px-10 mt-4">
-          {content1}
-        </p>
+        <div className="font-worksans font-normal text-xl sm:text-3xl lg:text-xl sm:text-center text-main px-10 mt-4">
+          <p className="hidden lg:block">
+            Anlaşmalı lokasyonlarımız arasına katılmak, Tossy partnelerine özel
+            hizmetlerimizden faydalanmak ve tüketilemeyen yemeklerinizden kâr
+            edebilmek için aramıza katılın.
+          </p>
+          <p className="block lg:hidden">
+            Anlaşmalı lokasyonlarımızın arasına katılarak; tüketilemeyen
+            yemeklerinizden kâr edin ve avantajlarımızdan faydalanın.
+          </p>
+        </div>
         <Link
           to="basvur"
           className="bg-main rounded-md font-worksans font-normal text-white text-xl sm:text-3xl lg:text-xl py-3 px-12 sm:py-6 sm:px-24 lg:py-3 lg:px-12 mt-12"
@@ -127,7 +83,7 @@ const Home = () => {
 
             <Link
               to="kesfet"
-              className="bg-main rounded-md font-worksans font-normal text-white text-center text-xl sm:text-3xl lg:text-xl py-3 sm:py-6 lg:py-3 w-6/12 lg:w-3/12 self-center lg:self-start mt-12"
+              className="bg-main rounded-md font-worksans font-normal text-white text-center text-xl sm:text-3xl lg:text-xl py-3 sm:py-6 lg:py-3 w-6/12 lg:w-5/12 xl:w-3/12 self-center lg:self-start mt-12"
             >
               Keşfet
             </Link>
@@ -166,9 +122,19 @@ const Home = () => {
         <h2 className="font-crimson font-bold text-2xl sm:text-4xl text-main mx-4 mt-4">
           Soru, Şikayet ve Önerileriniz için bize ulaşın
         </h2>
-        <p className="font-worksans font-normal text-xl sm:text-3xl lg:text-xl sm:text-center text-main !leading-relaxed px-10 lg:px-48 mt-4">
-          {content2}
-        </p>
+        <div className="font-worksans font-normal text-xl sm:text-3xl lg:text-xl sm:text-center text-main !leading-relaxed px-10 lg:px-48 mt-4">
+          <p className="hidden lg:block">
+            Partnerlik, yatırım, kariyer, fuar ve benzeri konular için
+            sorularınız; partnerlerimiz, kullanıcılarımız, personellerimiz,
+            uygulamamız ile alakalı şikayetleriniz ve/veya önerileriniz var ise
+            lütfen bize ulaşın. Dünyayı ve cüzdanınızı korurken, sizi memnun
+            tutmak bizim için çok önemli.
+          </p>
+          <p className="block lg:hidden">
+            Dünyayı ve cüzdanınızı korurken, sizi memnun tutmak bizim için çok
+            önemli. Gelin tanışalım!
+          </p>
+        </div>
         <Link
           to="formgonder"
           className="bg-main rounded-md font-worksans font-normal text-white text-xl sm:text-3xl lg:text-xl py-3 px-8 sm:py-6 sm:px-20 lg:py-3 lg:px-8 mt-12"

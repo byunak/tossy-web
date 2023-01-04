@@ -13,7 +13,7 @@ import {
 const Footer = () => {
   return (
     <div className="absolute bottom-0 w-full h-32">
-      <div className="bg-main h-full flex flex-col sm:flex-row sm:justify-around justify-center items-center text-white text-lg sm:text-2xl lg:text-lg">
+      <div className="bg-main h-full flex flex-col sm:flex-row sm:justify-around justify-center items-center lg:items-end lg:pb-7 text-white text-lg sm:text-2xl lg:text-lg">
         <div className="flex flex-row">
           <Link to="placeholder" className="mr-5">
             <FaFacebookF />
