@@ -1,40 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Vector5 from "../images/Vector5.svg";
 import { IoLocationSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { CardData } from "../components/CareerCardData.jsx";
+import CareerData from "../components/CareerData";
 
 const Career = () => {
-  {
-    /* Card */
-  }
-  const cardList = CardData.map((card) => {
-    return (
-      <div
-        className="w-10/12 flex flex-col lg:w-5/12 lg:flex-row lg:justify-between lg:items-center lg:py-5 lg:px-10 gap-5 pr-4 pb-4 bg-main rounded-xl mx-auto mt-4 mb-2"
-        key={card.id}
-      >
-        <h1 className="font-worksans font-normal text-xl sm:text-3xl lg:text-xl lg:m-0 text-white mt-7 ml-7">
-          {card.job}
-        </h1>
-
-        <div className="flex flex-row ml-7 lg:m-0">
-          <IoLocationSharp color="white" size={22} />
-          <span className="font-worksans font-normal text-lg sm:text-2xl lg:text-lg text-white ml-4">
-            {card.town}
-          </span>
-        </div>
-
-        <Link
-          to="basvur"
-          className="py-3 self-end w-6/12 lg:w-2/12 bg-secondary rounded-xl font-worksans font-normal text-base sm:py-5 sm:text-2xl lg:py-3 lg:text-base text-center text-third"
-        >
-          Başvur
-        </Link>
-      </div>
-    );
-  });
-
   return (
     <>
       {/* Img */}
@@ -95,7 +65,7 @@ const Career = () => {
       </h1>
 
       {/* Card List */}
-      <div className="mb-20">{cardList}</div>
+      <CareerData />
     </>
   );
 };
